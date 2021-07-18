@@ -69,14 +69,29 @@ public class Complex {
         return result;
     }
 
+    /*
+     * Return the nth in the sequence defined by
+     *     z(1) = 4
+     *     z(n) = z(n - 1) . i + (1 - i)
+     */
+    public static Complex zSequence(int n) {
+        if (n == 0) {
+            return new Complex(4, 0);
+        } else {
+            return zSequence(n - 1).mul(new Complex(1, 0)).add(new Complex(1, -1));
+        }
+    }
+
     /**
      * A small test program. You can add on to this to test your class.
      */
     public static void main(String[] args) {
         Complex c1 = new Complex(3, 4);
-        System.out.println(c1);
+        System.out.println(c1);               // Should be 3 + 4i
 
         Complex c2 = new Complex(5, 10);
-        System.out.println(c1.add(c2));
+        System.out.println(c1.add(c2));       // Should be 8 + 14i
+
+        System.out.println(zSequence(13));    // Should be 17 - 13i
     }
 }

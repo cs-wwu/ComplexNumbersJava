@@ -37,5 +37,8 @@ test-mul: test-build
 test-string: test-build
 	java -cp $(TESTCLASSPATH) TestRunner ComplexTest#testString
 
+test-z-sequence: test-build
+	java -cp $(TESTCLASSPATH) TestRunner ComplexTest#testZSequence
+
 test: test-build
 	java -cp $(TESTCLASSPATH) TestRunner ComplexTest

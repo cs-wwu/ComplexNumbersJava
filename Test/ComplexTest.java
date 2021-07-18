@@ -80,4 +80,10 @@ public class ComplexTest {
         Complex c5 = new Complex(0, -5.4);
         assertEquals("-5.4i", c5.toString());
     }
+
+    @Test
+    public void testZSequence() {
+        Complex r = Complex.zSequence(13);
+        assertEquals("17.0-13.0i", r.toString());
+    }
 }
