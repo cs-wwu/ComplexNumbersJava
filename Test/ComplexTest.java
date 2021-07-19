@@ -83,7 +83,13 @@ public class ComplexTest {
 
     @Test
     public void testZSequence() {
+        Complex r1 = Complex.zSequence(0);
+        assertEquals(4, r1.getReal());
+        assertEquals(0, r1.getImaginary());
+
         Complex r = Complex.zSequence(13);
+        assertEquals(17, r.getReal());
+        assertEquals(-13, r.getImaginary());
         assertEquals("17.0-13.0i", r.toString());
     }
 }

@@ -71,7 +71,7 @@ public class Complex {
 
     /*
      * Return the nth in the sequence defined by
-     *     z(1) = 4
+     *     z(0) = 4
      *     z(n) = z(n - 1) . i + (1 - i)
      */
     public static Complex zSequence(int n) {
